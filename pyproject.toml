@@ -1,0 +1,42 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "apex-deepagents-matrix"
+version = "1.0.0"
+description = "Deterministic Mathematical Kernels, Causal Infrastructure Grounding & Compensatory Rollback Middleware for LangChain and DeepAgents"
+readme = "README.md"
+authors = [
+    { name = "Ahmed Hassan", email = "aah@a2zsoc.com" }
+]
+license = { text = "MIT" }
+requires-python = ">=3.10"
+keywords = [
+    "langchain",
+    "deepagents",
+    "langgraph",
+    "agentic-infrastructure",
+    "mathematical-solvers",
+    "np-hard",
+    "rollback-dag",
+    "blast-radius",
+    "zero-dependency",
+    "autonomous-sre"
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["apex_deepagents_matrix*"]
