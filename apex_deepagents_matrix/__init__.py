@@ -4,6 +4,22 @@ Pure Python 3.10+ standard library. Zero external dependencies.
 Incubated under Apex Growth Systems LLC - Sole Managing Member: Ahmed Hassan.
 """
 
+from apex_deepagents_matrix.eval import (
+    AgentGenome,
+    DynamicAgentEvolutionEngine,
+    E2EAgenticTestingFramework,
+    E2EScenarioReport,
+    E2EStep,
+    E2EStepResult,
+    EvolutionProgress,
+    SWEEvalSummary,
+    SWEEvaluationHarness,
+    SWEIssue,
+    SWEPatchResult,
+    VirtualRepoSandbox,
+    build_standard_e2e_test_suite,
+    create_standard_swe_benchmark_dataset,
+)
 from apex_deepagents_matrix.harness import (
     DeepAgentsMatrixHarness,
     SubAgentTaskResult,
@@ -24,7 +40,7 @@ from apex_deepagents_matrix.solvers import (
     TopologicalTaskScheduler,
 )
 
-__version__ = "1.0.0"
+__version__ = "1.1.0"
 __author__ = "Ahmed Hassan"
 __company__ = "Apex Growth Systems LLC"
 
@@ -43,4 +59,19 @@ __all__ = [
     "TopologicalTaskScheduler",
     "AllocationItem",
     "ScheduledTask",
+    # Evaluation & Evolution
+    "SWEIssue",
+    "SWEPatchResult",
+    "SWEEvalSummary",
+    "VirtualRepoSandbox",
+    "SWEEvaluationHarness",
+    "create_standard_swe_benchmark_dataset",
+    "E2EStep",
+    "E2EStepResult",
+    "E2EScenarioReport",
+    "E2EAgenticTestingFramework",
+    "build_standard_e2e_test_suite",
+    "AgentGenome",
+    "EvolutionProgress",
+    "DynamicAgentEvolutionEngine",
 ]
