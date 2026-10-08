@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "apex-deepagents-matrix"
-version = "1.0.0"
+version = "1.1.0"
 description = "Deterministic Mathematical Kernels, Causal Infrastructure Grounding & Compensatory Rollback Middleware for LangChain and DeepAgents"
 readme = "README.md"
 authors = [
