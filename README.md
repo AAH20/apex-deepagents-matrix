@@ -294,8 +294,16 @@ def guarded_tool_node(state):
 
 ---
 
-## 9. License & Commercial Attribution
+## 9. Ecosystem Synergy: A2Z Agentic Hypervisor & NVIDIA Inception
+
+For hardware-accelerated tool interception, NVIDIA NIM / BlueField-3 DPU zero-trust isolation, and non-repudiable SHA-256 Merkle chain emission, combine this matrix with:
+* [`a2z-agentic-hypervisor`](https://github.com/AAH20/a2z-agentic-hypervisor): Flagship cyber defense hypervisor for [a2zsoc.com](https://a2zsoc.com) under the NVIDIA Inception Program.
+
+---
+
+## 10. License & Commercial Attribution
 
 Incubated under **Apex Growth Systems LLC**  
 Sole Managing Member: **Ahmed Hassan** (`aah@a2zsoc.com`)  
+Flagship Domain: [a2zsoc.com](https://a2zsoc.com)  
 Licensed under the [MIT License](LICENSE).
