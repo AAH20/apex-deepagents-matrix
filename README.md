@@ -2,17 +2,17 @@
 
 # `apex-deepagents-matrix`
 
-### Deterministic Mathematical Kernels, Causal Digital Twin Grounding & Compensatory Rollback Middleware for LangChain & DeepAgents
+### Deterministic Mathematical Kernels, Causal Digital Twin Grounding & Compensatory Rollback Middleware with Integration Hooks for LangChain & DeepAgents
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-brightgreen.svg)](pyproject.toml)
 [![Zero Dependencies](https://img.shields.io/badge/Dependencies-Zero%20(Pure%20Stdlib)-success.svg)](pyproject.toml)
-[![SWE Benchmark](https://img.shields.io/badge/SWE--bench-Integrated%20Harness-green.svg)](apex_deepagents_matrix/eval/swe_harness.py)
-[![E2E Testing](https://img.shields.io/badge/Agentic%20E2E-100%25%20Rollback%20Fidelity-blueviolet.svg)](apex_deepagents_matrix/eval/e2e_framework.py)
+[![SWE Benchmark](https://img.shields.io/badge/SWE--bench--style-Integrated%20Harness-green.svg)](apex_deepagents_matrix/eval/swe_harness.py)
+[![E2E Testing](https://img.shields.io/badge/Agentic%20E2E-Self--Reported%20Rollback%20Fidelity-blueviolet.svg)](apex_deepagents_matrix/eval/e2e_framework.py)
 [![Dynamic Evolution](https://img.shields.io/badge/Evolution%20Loop-Genetic%20Tuning-gold.svg)](apex_deepagents_matrix/eval/evolution.py)
 [![Incubated by](https://img.shields.io/badge/Incubator-Apex%20Growth%20Systems%20LLC-black.svg)](https://github.com/AAH20)
 
-**Eliminating the "Reasoning vs. Reality" Gap: Replacing Hallucinated LLM Planning Loops with Microsecond Combinatorial Solvers, Hoare-Logic Rollback DAGs, SWE-bench Verification, and Evolutionary Self-Improvement Loops.**
+**Eliminating the "Reasoning vs. Reality" Gap: Replacing Hallucinated LLM Planning Loops with Microsecond Combinatorial Solvers, LIFO Compensatory Rollback Journals, SWE-bench-style Verification, and Evolutionary Self-Improvement Loops.**
 
 </div>
 
@@ -29,12 +29,14 @@ When enterprise engineering teams deploy **LangChain** and **DeepAgents** harnes
 
 `apex-deepagents-matrix` provides a turnkey, zero-dependency foundation:
 * **Microsecond NP-Hard Optimization Kernels:** Exact 0/1 Knapsack dynamic programming and topological critical path scheduling in pure Python standard library.
-* **Hoare-Logic Rollback Middleware:** Automatic synthesis of compensatory inverse execution sequences:
+* **LIFO Compensatory Rollback Middleware:** Automatic synthesis of compensatory inverse execution sequences (inverse-tool journal, reversed order):
   $$[A_1, A_2, \dots, A_k] \implies [A_k^{-1}, \dots, A_2^{-1}, A_1^{-1}]$$
 * **Matrix Validation Hooks:** Pre-execution blast-radius ceilings and destructive action denial.
-* **SWE Benchmark Evaluation Suite (`apex_deepagents_matrix.eval.swe_harness`):** In-memory virtual repository sandboxing, patch syntax validation, pass@1 / pass@k tracking, and automatic rollback on broken patches.
-* **Agentic E2E Testing Framework (`apex_deepagents_matrix.eval.e2e_framework`):** Multi-turn trajectory execution, fault-injection testing, Hoare invariant auditing, and 100% compensatory rollback fidelity verification.
-* **Dynamic Agent Evolution Engine (`apex_deepagents_matrix.eval.evolution`):** Genetic parameter tuning, multi-objective fitness optimization, and automated prompt reflection synthesis.
+* **SWE-bench-style Benchmark Evaluation Suite (`apex_deepagents_matrix.eval.swe_harness`):** In-memory virtual repository sandboxing, unified-diff application, patch syntax validation, pass@1 / pass@k tracking, and automatic rollback on broken patches. Evaluates a small synthetic issue set defined in-file (`create_standard_swe_benchmark_dataset`) — not the upstream SWE-bench dataset.
+* **Agentic E2E Testing Framework (`apex_deepagents_matrix.eval.e2e_framework`):** Multi-turn trajectory execution, fault-injection testing, and invariant auditing, with self-reported compensatory rollback fidelity measured over its own scenarios.
+* **Dynamic Agent Evolution Engine (`apex_deepagents_matrix.eval.evolution`):** Genetic parameter tuning, multi-objective fitness optimization, and rule-based (non-LLM) prompt-guidance synthesis.
+
+> **Scope & implementation status.** Implemented in pure-stdlib Python: the exact 0/1 Knapsack DP allocator, the Kahn topological scheduler with critical-path makespan, the LIFO compensatory rollback journal with inverse-tool map, the blast-radius / destructive-action validation hooks, the in-memory virtual-repo sandbox (unified-diff application + snapshot rollback), the fault-injection E2E framework, and the genetic evolution loop. Roadmap / design target: first-class LangChain/LangGraph integration — the middleware exposes hooks shaped for LangGraph node dispatchers, but no LangChain/LangGraph package is imported. Rollback fidelity is self-reported by the framework's own scenarios (not externally validated), and prompt guidance is produced by a rule-based heuristic, not an LLM.
 
 ---
 
@@ -42,7 +44,7 @@ When enterprise engineering teams deploy **LangChain** and **DeepAgents** harnes
 
 ```mermaid
 flowchart TD
-    subgraph Layer1 ["Layer 1: LangChain & DeepAgents Orchestration"]
+    subgraph Layer1 ["Layer 1: LangChain & DeepAgents Orchestration (design target)"]
         USER["User Goal / Enterprise Incident"]
         HARNESS["DeepAgentsMatrixHarness<br/>(Master Execution Controller)"]
         FLEET["SubAgent Task Fleet"]
@@ -51,7 +53,7 @@ flowchart TD
     subgraph Layer2 ["Layer 2: Deterministic Solvers & Safety Interceptors"]
         SOLVER["Exact Combinatorial Solvers<br/>(Knapsack DP & Kahn DAG Scheduler)"]
         VALIDATOR["MatrixValidationHook<br/>(Blast Radius Tripwire & Destructive Guard)"]
-        JOURNAL["CompensatoryRollbackMiddleware<br/>(LIFO Hoare-Logic Transaction Journal)"]
+        JOURNAL["CompensatoryRollbackMiddleware<br/>(LIFO Inverse-Tool Transaction Journal)"]
     end
 
     subgraph Layer3 ["Layer 3: Benchmark, E2E & Evolution Engine"]
@@ -75,7 +77,7 @@ flowchart TD
     JOURNAL --> PROD
 
     PROD -. "Fault Detected / Invariant Breach" .-> ROLLBACK_EXEC
-    ROLLBACK_EXEC -- "100% Atomic Reversal (LIFO)" --> PROD
+    ROLLBACK_EXEC -- "LIFO Atomic Reversal" --> PROD
 
     HARNESS -. "Continuous Verification" .-> SWE
     HARNESS -. "Multi-turn Validation" .-> E2E
@@ -85,7 +87,7 @@ flowchart TD
 
 ---
 
-## 3. SWE Benchmark & Rollback Execution Loop
+## 3. SWE-bench-style Benchmark & Rollback Execution Loop
 
 ```mermaid
 sequenceDiagram
@@ -94,7 +96,7 @@ sequenceDiagram
     participant Eval as SWEEvaluationHarness
     participant Sandbox as VirtualRepoSandbox
     participant Agent as DeepAgents Generator
-    participant Invariant as Hoare Invariant Verifier
+    participant Invariant as Invariant Verifier
 
     Dev->>Eval: evaluate_patch(issue, patch_provider)
     Eval->>Sandbox: Initialize virtual in-memory repository
@@ -149,7 +151,7 @@ stateDiagram-v2
     NextStep --> TrajectorySuccess: All Steps Verified
 
     TriggerRollback --> CompensatoryLIFO: Fetch Journal in Reverse Order
-    CompensatoryLIFO --> StateCleanlyRestored: 100% Rollback Fidelity
+    CompensatoryLIFO --> StateCleanlyRestored: Rollback Fidelity (self-reported)
     StateCleanlyRestored --> [*]: Trajectory Safely Aborted
     TrajectorySuccess --> [*]: Trajectory Validated
 ```
@@ -192,7 +194,7 @@ python3 benchmarks/run_swe_and_e2e_eval.py
 | **Topological DAG Scheduler** | 500 dependent tasks | **189.52 µs** | 5,276 graphs/sec | < 1,000 µs (1.0 ms) | **PASSED** |
 | **SWE Patch Validation Harness** | Full in-memory compile & test | **60.36 µs** | **16,566 issues/sec** | < 2,000 µs (2.0 ms) | **PASSED** |
 | **Agentic E2E Trajectory Runner** | Multi-turn guarded steps + invariants | **8.20 µs** | **121,906 scenarios/sec**| < 1,000 µs (1.0 ms) | **PASSED** |
-| **Compensatory Rollback Fidelity** | Injected failure reverse restoration | **100.0%** | Exact LIFO Order | 100.0% Reversible | **PASSED** |
+| **Compensatory Rollback Fidelity** | Injected failure reverse restoration (self-reported by framework scenarios) | **100.0%** | Exact LIFO Order | 100.0% Reversible | **PASSED** |
 | **Dynamic Evolution Loop** | 10 generations, 4 population | **1.93 ms / gen** | 518 gens/sec | < 50.0 ms / gen | **PASSED** |
 | **External Dependencies** | Entire library | **0 dependencies** | Standard library only | Zero 3rd-party deps | **PASSED** |
 
@@ -243,7 +245,7 @@ rollback = harness.rollback_all()
 print(f"Rollback Action: {rollback[0]['tool_name']} on {rollback[0]['target_resource_id']}")
 ```
 
-### 7.2 Running SWE Benchmark & E2E Trajectory Audits
+### 7.2 Running SWE-bench-style Benchmark & E2E Trajectory Audits
 
 ```python
 from apex_deepagents_matrix.eval import (
@@ -274,7 +276,7 @@ print(f"Optimal Fitness: {best_genome.fitness_score}, Refined Prompt: {best_geno
 
 ---
 
-## 8. Integration with LangGraph Middleware
+## 8. Integration Hooks for LangGraph Middleware (design target)
 
 ```python
 from apex_deepagents_matrix import MatrixValidationHook, CompensatoryRollbackMiddleware
